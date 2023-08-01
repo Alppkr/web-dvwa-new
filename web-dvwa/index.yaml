@@ -3,12 +3,12 @@ entries:
   web-dvwa:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-08-01T18:46:08.392771394Z"
+    created: "2023-08-01T19:32:23.394059169Z"
     description: A Helm chart for Kubernetes
-    digest: 022f6de74dc48e58ff8c5cdb866dfc6486984f472890c656df34420cac4a342c
+    digest: ae7539b6e80af214b3313060f80ff8fb9a75d211bf79a3db083a69ec06ddff6d
     name: web-dvwa
     type: application
     urls:
-    - https://github.com/Alppkr/web-dvwa-new/tree/main/web-dvwa/web-dvwa-0.1.0.tgz
-    version: 0.1.0
-generated: "2023-08-01T18:46:08.392451347Z"
+    - https://alppkr.github.io/web-dvwa-new/web-dvwa/web-dvwa-1.16.0.tgz
+    version: 1.16.0
+generated: "2023-08-01T19:32:23.393831743Z"
