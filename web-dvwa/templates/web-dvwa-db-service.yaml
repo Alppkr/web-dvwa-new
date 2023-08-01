@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-dvwa-db-svc
+spec:
+  selector:
+    app: web-dvwa-db
+  ports:
+  - port: {{ .Values.db_service.port }}
+    targetPort: {{ .Values.db_service.port }}
+  type: {{ .Values.db_service.type }}

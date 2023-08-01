@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-dvwa-db
+spec:
+  selector:
+    matchLabels:
+      app: web-dvwa-db
+  template:
+    metadata:
+      labels:
+        app: web-dvwa-db
+    spec:
+      containers:
+      - name: web-dvwa-db
+        image: "{{ .Values.db_image.repository }}:{{ .Values.db_image.tag | default .Chart.AppVersion }}"
+        ports:
+        - containerPort: 3306
+        envFrom:
+        - secretRef:
+            name: web-dvwa
