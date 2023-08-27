@@ -30,4 +30,4 @@ istio:
   selector_key: app
   selector_value: istio-ingressgateway
   hosts:
-    - host: web-dvwa.example.com
+    - host: web-dvwa.example.com.192.168.25.240.sslip.io
