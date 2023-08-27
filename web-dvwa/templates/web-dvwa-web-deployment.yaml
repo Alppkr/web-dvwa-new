@@ -20,6 +20,9 @@ spec:
         image: "{{ .Values.web_image.repository }}:{{ .Values.web_image.tag | default .Chart.AppVersion }}"
         ports:
         - containerPort: 80
+        envFrom:
+        - secretRef:
+            name: web-dvwa
       initContainers:
       - name: create-db
         image: "{{ .Values.db_image.repository }}:{{ .Values.db_image.tag | default .Chart.AppVersion }}"
@@ -30,3 +33,4 @@ spec:
         volumeMounts:
           - name: create-db
             mountPath: "/etc/create-db"
+      

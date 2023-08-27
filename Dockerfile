@@ -9,5 +9,5 @@ RUN apt-get update \
  # Use pdo_sqlite instead of pdo_mysql if you want to use sqlite
  && docker-php-ext-install gd mysqli pdo pdo_mysql
 
-COPY --chown=www-data:www-data . .
-COPY --chown=www-data:www-data config/config.inc.php.dist config/config.inc.php
+COPY --chown=www-data:www-data DVWA DVWA
+COPY --chown=www-data:www-data DVWA/config/config.inc.php.dist DVWA/config/config.inc.php
